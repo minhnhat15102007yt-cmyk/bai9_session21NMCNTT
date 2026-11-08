@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>bài 9 session 21</title>
+  <link rel="stylesheet" href="https://stackedit.io/style.css" />
+</head>
+
+<body class="stackedit">
+  <div class="stackedit__html"><h3 id="phần-1-thiết-kế-prompt-3-thành-phần">PHẦN 1: THIẾT KẾ PROMPT 3 THÀNH PHẦN</h3>
+<ol>
+<li>
+<p><strong>Vì sao câu hỏi cụt ngủn gây Hallucination:</strong> Thiếu ngữ cảnh và log lỗi khiến AI phải “đoán mò”, nhầm sự cố phần mềm thành phần cứng cơ khí (khuyên tháo vỏ máy).</p>
+</li>
+<li>
+<p><strong>Câu Prompt chuẩn:</strong> Chia rõ 3 phần <code>[Context]</code> (máy trạm Win 11, Bến xe Miền Đông),  <code>[Raw Error]</code> (dán nguyên văn log lỗi), và <code>[Instruction]</code> (yêu cầu dịch nghĩa và đưa 3 bước sửa).</p>
+</li>
+</ol>
+<h3 id="phần-2-giải-mã-lỗi--khắc-phục">PHẦN 2: GIẢI MÃ LỖI &amp; KHẮC PHỤC</h3>
+<ol start="3">
+<li>
+<p><strong>Nguyên nhân cốt lõi:</strong> Phần mềm bị chặn quyền ghi file log vào thư mục bảo vệ <code>C:\Program Files</code> của Windows 11, gây sập hệ thống (mã lỗi quyền truy cập).</p>
+</li>
+<li>
+<p><strong>3 bước xử lý tại chỗ:</strong></p>
+<ul>
+<li>
+<p><strong>Bước 1:</strong> Chạy phần mềm với quyền cao nhất bằng cách click chuột phải chọn <strong>Run as administrator</strong>.</p>
+</li>
+<li>
+<p><strong>Bước 2:</strong> Vào thuộc tính (<code>Properties</code>) của thư mục <code>data</code>  →\rightarrow→ chọn tab <strong>Security</strong>  →\rightarrow→ bấm <strong>Edit</strong>.</p>
+</li>
+<li>
+<p><strong>Bước 3:</strong> Cấp quyền <strong>Full control</strong> / <strong>Modify</strong> cho tài khoản sử dụng, lưu lại và chạy lại ứng dụng.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Xử lý bẫy an ninh (API Key):</strong> Phải xóa/ẩn chuỗi mã bí mật (<code>volt_secret_token_889922</code>) trước khi đưa lên AI để tránh bị lộ lọt dữ liệu, ngăn chặn nguy cơ hacker xâm nhập hệ thống trạm sạc từ xa.</p>
+</li>
+</ol>
+</div>
+</body>
+
+</html>
